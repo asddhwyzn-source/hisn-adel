@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حصن عادل</title>
+<meta name="theme-color" content="#0f5132">
+<link rel="manifest" id="m">
+<style>
+*{box-sizing:border-box;font-family:tahoma;margin:0;padding:0}
+body{background:#f5f1e8}
+.h{background:#0f5132;color:#fff;padding:25px;text-align:center}
+.c{background:#fff;margin:12px;padding:16px;border-radius:12px;border-right:5px solid #198754;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+</style>
+</head>
+<body>
+<div class="h"><h1>🕌 حصن عادل</h1><p>حصن المسلم - الحديدة اليمن</p></div>
+<div id="l" style="padding:10px"></div>
+<script>
+const d=[
+{title:"أذكار الصباح",txt:"أصبحنا وأصبح الملك لله والحمد لله"},
+{title:"أذكار المساء",txt:"أمسينا وأمسى الملك لله"},
+{title:"أذكار النوم",txt:"باسمك ربي وضعت جنبي"},
+{title:"الاستيقاظ",txt:"الحمد لله الذي أحيانا بعد ما أماتنا"},
+{title:"بعد الصلاة",txt:"أستغفر الله - سبحان الله 33"},
+{title:"أذكار عامة",txt:"سبحان الله وبحمده سبحان الله العظيم"}
+];
+document.getElementById("l").innerHTML=d.map(x=>`<div class="c"><h3>${x.title}</h3><p>${x.txt}</p></div>`).join("");
+const mf={name:"حصن عادل",short_name:"حصن عادل",start_url:"./",display:"standalone",background_color:"#f5f1e8",theme_color:"#0f5132",icons:[{src:"https://cdn-icons-png.flaticon.com/512/1589/1589083.png",sizes:"512x512",type:"image/png"}]};
+const b=new Blob([JSON.stringify(mf)],{type:"application/json"});
+document.getElementById("m").href=URL.createObjectURL(b);
+</script>
+</body>
+</html>
